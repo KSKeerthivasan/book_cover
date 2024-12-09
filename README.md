@@ -35,192 +35,198 @@ from django.shortcuts import render
 def table(request):
     return render(request,'saveethatimetable.html')
 ```
-### saveethatimetable.html
+### Book_front_cover.html
 ```
 <html>
     <head>
-        <link href="Table.html" rel="import"/>
-        <title>Time Table</title>
-
+        <title>Book Cover Design</title>
         <style>
-                 
-            #name h1{
-                position: relative;
-                position:center top;
-                font-size: 30px;
-                left: 25%;
-                top: 145px;
+            h1{
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serifs;
+                text-align:left;
+
             }
-            #table1 {
-                width: 950px;
-                height: 150px;
-                left: 255px;
-                position: relative;
-                top: 140px;
-                text-align: center;
-                border-collapse: collapse;
             
+            body {
+                background-image: url("");
+                background-repeat: no-repeat;
+                background-size: 900px  1200px;
+                background-position: center top;
             }
-            #table1 th{
-                width:0%;
-                color: red;
-                border-width: 6px;
-                border-color: black;
-                background-color:gray;
+            
+            #heading {
+                color: rgb(136, 201, 201);
+                position: absolute;
+                top: 90px ;
+                left: 430px;
+                font-size: 25px;
+                text-decoration-line:underline;
+
             }
-            #table1 td{
-                border-width: 5px;
-                border-color: black;
-                background-color:silver ;
+            
+            #line1 {
+                color: rgb(86, 237, 230);
+                position: absolute;
+                top: 178px;
+                left: 895px;
+                font-size: 12px;
+                font-style: oblique;
+                font-size: 13px;
+
+            }
+            
+            #author {
+                color: rgb(103, 176, 111);
+                position:absolute;
+                top: 1100px;
+                left: 530px;
+                font-size: 17px;
+                font-family:fantasy;
+                letter-spacing:10px ;   
 
             }
 
-            #table2{
-                height: 200px;
-                width: 800px;
-                text-align: center;
-                position: relative;
-                left: 325px;
-                top:150px;
-                border-collapse: collapse;
-                border-width:0cap;
+            #line2 {
+                background: rgb(136, 201, 201);
+                height: 3px;
+                width: 350px;
+                position: absolute;
+                left: 310px;
             }
-            #table2 th{
-                width: 20%;
-                color: red;
-                border-width: 5px;
-                background-color: gray;
+
+            #linetop {
+                color: rgb(136, 201, 201);
+                font-size: small;
+                top: 10px;
+                position: absolute;
+                left: 340px;
+                
             }
-            #table2 td{
-                width: 40%;
-                border-width: 5px;
-                background-color: silver;
+
+            #linebottom {
+                padding-top: 1000px; 
+                height: 10px;
+                width: 885px; 
+                position: absolute;
+                left: 315px;
+                
+            }
+
+            #edition {
+                color: aliceblue;
+                left: 825px;
+                top: 1000px;
+                position: absolute;
+                font-style: oblique;
+                font-size: 20px;
+                word-spacing: 10px;
+                letter-spacing: 7px;
             }
         </style>
     </head>
     {% load static %}
-    <body style="background-image: url('{% static 'images/saveethalogo.jpg' %}');background-repeat:no-repeat;background-size: 990px 130px;background-position:center top;">
-        </div>
-        <div id="name">
-            <h1>SLOT TIMETABLE - KEERTHIVASAN KS (24900276)</h1>
-        </div>
-
-            <table id="table1"  border="3px" >
-                <tr>
-                    <th colspan="6">TIME TABLE</th>
-                </tr>
-                <tr>
-                    <th> Days/Time</th>
-                    <th cellpadding="50px">  8-10 pm </th>
-                    <th> 10-12 pm </th>
-                    <th> 12-1 pm </th>
-                    <th> 1-3 pm </th>
-                    <th> 3-5 pm </th>
-                </tr>
-                <tr>
-                    <th> Monday </th>
-                    <td></td>
-                    <td> Web applicationn development </td>
-                    <th align="center" cellpadding="1px" rowspan="6" >L <br> <br> <br> U <br><br><br> N <br><br><br> C <br><br><br> H <br><br><br> </th>
-                    <td>B.EEE </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th> Tuesday </th>  
-                    <td></td>
-                    <td>Data Science</td>
-                    <td> Python </td>
-                    <td></td> 
-                </tr>
-                <tr>
-                    <th> Wedneesday </th>
-                    <td> Python </td>
-                    <td> English </td>
-                    <td> Mentor meet </td>
-                    <td> B.EEE </td>
-                </tr>
-                <tr>
-                    <th> Thursday </th>
-                    <td></td>
-                    <td> Python </td>
-                    <td> Web application development </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th> Friday </th>
-                    <td></td>
-                    <td> Career Development </td>
-                    <td> Data Science </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th> Saturday </th>
-                    <td> English </td>
-                    <td> Python </td>
-                    <td></td>
-                    <td> Web application development </td>
-                </tr>
-            </table>
-
-
-
-            <table id="table2" border="3px">
-          
-                <tr>
-                    <th>S.No.</th>
-                    <th>Subject Code</th>
-                    <th>Subject Name</th>
-                </tr>
-                <tr>
-                    <th>1.</th>
-                    <td>19AI414</td>
-                    <td>Fundamentals of Web Application Development (FWAD)</td>
-                </tr>
-                <tr>
-                    <th>2.</th>
-                    <td>19AI403</td>
-                    <td>Introduction to Data Science</td>
-                </tr>
-                <tr>
-                    <th>3.</th>
-                    <td>19AI301C</td>
-                    <td>Python and Linear Algebra</td>
-                </tr>
-                <tr>
-                    <th>4.</th>
-                    <td>19EY708</td>
-                    <td>Career Development Skills (CDS)</td>
-                </tr>
-                <tr>
-                    <th>5.</th>
-                    <td>19EN101</td>
-                    <td>Communicative English</td>
-                </tr>
-                <tr>
-                    <th>6.</th>
-                    <td>19EE305</td>
-                    <td>Basic Electrical, Electronics and Measurement Engineering (B.EEE)</td>
-                </tr>
-            </table>
-        </body>
-    </html>
+    <body style="background-image: url('{% static 'images/Mirrordimension.jpeg '%}');background-repeat:no-repeat;background-size: 900px 1200px;">
+        <br>
+        <br>
+        <br>
+       <div id="line2"> 
+        <br> 
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>   
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <hr>
+       </div>
+       <div id="heading" > 
+        <h1 >THE MIRROR DIMENSIION</h1>
+       </div>
+       <div id="line1">
+        <h1>Ever <span><i>Present</i></span> Undetected</h1>
+       </div>
+       <div id="author">
+        <h1>KS KEERTHIVASAN</h1>
+       </div>
+       <div id="linetop">
+        <h1><span><i>Journey To Fictious World </i></span></h1>
+       </div>
+       <div id="linebottom">
+        <br>
+        <hr>
+       </div>
+       <div id="edition">
+        <h1>Second Edition</h1>
+       </div>
+    </body>
+</html>
 ```
 settings.py
 ```
-
 from pathlib import Path
-import os
-
-
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-SECRET_KEY = 'django-insecure-^y2pt$@b7ns@j8dcds6*$2%hifn2@srtf#zur=*87s@h-4vd*d'
+SECRET_KEY = 'django-insecure-(h9qg%k_bf3f0ib2zm&e*azeys130vr+^fqma2v5bsn(mg@a-h'
 
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -229,7 +235,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'timetable',
+    'book',
 ]
 
 MIDDLEWARE = [
@@ -242,7 +248,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'slot.urls'
+ROOT_URLCONF = 'WebExp.urls'
 
 TEMPLATES = [
     {
@@ -260,8 +266,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'slot.wsgi.application'
-
+WSGI_APPLICATION = 'WebExp.wsgi.application'
 
 DATABASES = {
     'default': {
@@ -269,7 +274,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -285,8 +289,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -303,11 +305,11 @@ urls.py
 ```
 from django.contrib import admin
 from django.urls import path
-from timetable import views
+from book import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('timetable',views.table)
+    path('book',views.book),
 ]
 ```
 # OUTPUT:
