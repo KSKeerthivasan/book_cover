@@ -32,8 +32,8 @@ Publish the website in the LocalHost.
 ### views.py
 ```
 from django.shortcuts import render
-def table(request):
-    return render(request,'saveethatimetable.html')
+def book(request):
+    return render(request,'Book.html')
 ```
 ### Book_front_cover.html
 ```
