@@ -6,28 +6,20 @@ To design a book front cover page using HTML and CSS.
 # DESIGN STEPS:
 ## Step 1:
 Create a Django Admin project.
-
 ## Step 2:
 Create an app in the Django interface.
-
 ## Step 3:
 Create a folder named 'static' in the app folder.
-
 ## Step 4:
 Create a new HTML file in the static folder.
-
 ## Step 5:
 Write the HTML code with relevant CSS properties.
-
 ## Step 6:
 Choose the appropriate style and color scheme.
-
 ## Step 7:
 Insert the images in their appropriate places.
-
 ## Step 8:
 Publish the website in the LocalHost.
-
 # PROGRAM:
 ### views.py
 ```
@@ -44,16 +36,13 @@ def book(request):
             h1{
                 font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serifs;
                 text-align:left;
-
             }
-            
             body {
                 background-image: url("");
                 background-repeat: no-repeat;
                 background-size: 900px  1200px;
                 background-position: center top;
             }
-            
             #heading {
                 color: rgb(136, 201, 201);
                 position: absolute;
@@ -61,9 +50,7 @@ def book(request):
                 left: 430px;
                 font-size: 25px;
                 text-decoration-line:underline;
-
             }
-            
             #line1 {
                 color: rgb(86, 237, 230);
                 position: absolute;
@@ -72,9 +59,7 @@ def book(request):
                 font-size: 12px;
                 font-style: oblique;
                 font-size: 13px;
-
             }
-            
             #author {
                 color: rgb(103, 176, 111);
                 position:absolute;
@@ -83,9 +68,7 @@ def book(request):
                 font-size: 17px;
                 font-family:fantasy;
                 letter-spacing:10px ;   
-
             }
-
             #line2 {
                 background: rgb(136, 201, 201);
                 height: 3px;
@@ -93,25 +76,20 @@ def book(request):
                 position: absolute;
                 left: 310px;
             }
-
             #linetop {
                 color: rgb(136, 201, 201);
                 font-size: small;
                 top: 10px;
                 position: absolute;
                 left: 340px;
-                
             }
-
             #linebottom {
                 padding-top: 1000px; 
                 height: 10px;
                 width: 885px; 
                 position: absolute;
-                left: 315px;
-                
+                left: 315px;   
             }
-
             #edition {
                 color: aliceblue;
                 left: 825px;
@@ -157,7 +135,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'book',
 ]
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -167,9 +144,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
 ROOT_URLCONF = 'WebExp.urls'
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -185,16 +160,13 @@ TEMPLATES = [
         },
     },
 ]
-
 WSGI_APPLICATION = 'WebExp.wsgi.application'
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -210,15 +182,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_TZ = True
-
 STATIC_URL = 'static/'
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ```
 urls.py
@@ -226,7 +193,6 @@ urls.py
 from django.contrib import admin
 from django.urls import path
 from book import views
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('book',views.book),
